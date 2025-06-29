@@ -25,7 +25,6 @@ vim.g.clipboard = {
   cache_enabled = true,
 }
 
-
 require("vim-options")
 require("lazy").setup("plugins")
 
