@@ -12,18 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- init.lua
-vim.g.clipboard = {
-  name = "wl-clipboard",
-  copy = {
-    ["+"] = "wl-copy --foreground --type text/plain",
-    ["*"] = "wl-copy --foreground --type text/plain",
-  },
-  paste = {
-    ["+"] = "wl-paste --no-newline",
-    ["*"] = "wl-paste --no-newline",
-  },
-  cache_enabled = true,
-}
+vim.opt.clipboard = "unnamedplus"
+
+if vim.g.neovide then
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
+end
 
 require("vim-options")
 require("lazy").setup("plugins")
